@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Onepocketpimp/GauntletBot.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "OnePocketPimp",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Onepocketpimp/GauntletBot/issues"
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Onepocketpimp/GauntletBot#readme",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "nodemon": "^2.0.2"
   }
 }
