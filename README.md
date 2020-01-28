@@ -1,2 +1,8 @@
 # GauntletBot
-Twitch Chat Bot that runs a gauntlet minigame that ends in chat timeouts(voluntary). Idea obtained from Day[9]TV
+Twitch Chat Bot that will be a playlist bot. More features to be added after that is done
+
+Features:
+1. Chat Clear - !clear
+Change List:
+
+

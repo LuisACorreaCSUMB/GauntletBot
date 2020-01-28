@@ -1,0 +1,24 @@
+{
+  "name": "Gauntletbot",
+  "version": "1.0.0",
+  "description": "Twitch Chat Bot that runs a gauntlet minigame that ends in chat timeouts(voluntary). Idea obtained from Day[9]TV",
+  "main": "chatbot_Functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Onepocketpimp/GauntletBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Onepocketpimp/GauntletBot/issues"
+  },
+  "homepage": "https://github.com/Onepocketpimp/GauntletBot#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}
