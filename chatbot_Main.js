@@ -1,21 +1,31 @@
 const tmi = require('tmi.js');
-/* need to figure out how to import other file functions to split features
- require('babel-register')({
-    presets: ['env']
-});
- */
+require('dotenv').config()
 // Define configuration options
+/*
 const opts = {
     options:{
-        debug: true
+        debug: (boolean- useful for building)
     },
   identity: {
-    username: "GauntletBot10",
-    password: "oauth:bxxr5c613l3mkl476orulnkq0gabck"
+    username: "(Account Username)",
+    password: "oauth:(Insert OAUTH here)"
   },
   channels: [
-    "onepocketpimp"
+    "(Desired Channel)"
   ]
+};
+*/
+const opts = {
+  options:{
+      debug: process.env.BOT_OPTION
+  },
+identity: {
+  username: process.env.BOT_USERNAME,
+  password: process.env.BOT_OAUTH
+},
+channels: [
+  process.env.BOT_CHANNEL
+]
 };
 // Create a client with our options
 const client = new tmi.client(opts);
@@ -73,20 +83,8 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`Ignore this message ${commandName}`);
   }
 }
-// Function called when the "dice" command is issued
-/*function rollDice () {
-    const sides = 6;
-    return Math.floor(Math.random() * sides) + 1;
-  }
-function play (){
-    return `current song is`;
-}
-*/
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
 
-}
-function oAuthAuthorize () {
-    //GET 'https://id.twitch.tv/oauth2/authorize?client_id=<your client ID>&redirect_uri=<your registered redirect URI>&response_type=token&scope=<space-separated list of scopes>'
 }

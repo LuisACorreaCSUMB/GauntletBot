@@ -1,0 +1,2 @@
+#NEVER PUBLISH TO REPOSITORY environmental variables
+.env 
