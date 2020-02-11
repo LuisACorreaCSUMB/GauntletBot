@@ -23,6 +23,7 @@ exports.connect = () => {
     console.log('Listening on 8888');
     app.listen(8888);
 }
+return true;
  /*
  async function connect(){
     try{

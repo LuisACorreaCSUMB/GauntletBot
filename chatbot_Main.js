@@ -36,6 +36,15 @@ client.on('connected', onConnectedHandler);
 
 // Connect to Twitch:
 client.connect();
+connectSpotify();
+//Spotify Connect
+async function connectSpotify() {
+  try{ let result = await fetchJSON('./spotifyConnect.js');
+  console.log(`Test connect ${result}`);
+  } catch(error) {
+    console.log('An error occurred in Spotify Connect.');
+  }
+}
 
 // Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
