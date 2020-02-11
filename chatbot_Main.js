@@ -1,18 +1,31 @@
 const tmi = require('tmi.js');
-/* need to figure out how to import other file functions to split features
- require('babel-register')({
-    presets: ['env']
-});
- */
-// Define configuration options
+require('dotenv').config()
+/*
 const opts = {
+    options:{
+        debug: (boolean- useful for building)
+    },
   identity: {
-    username: "GauntletBot10",
-    password: "bxxr5c613l3mkl476orulnkq0gabck"
+    username: "(Account Username)",
+    password: "oauth:(Insert OAUTH here)"
   },
   channels: [
-    "OnePocketPimp"
+    "(Desired Channel)"
   ]
+};
+*/
+// Define configuration options
+const opts = {
+  options:{
+      debug: process.env.BOT_OPTION
+  },
+identity: {
+  username: process.env.BOT_USERNAME,
+  password: process.env.BOT_OAUTH
+},
+channels: [
+  process.env.BOT_CHANNEL
+]
 };
 // Create a client with our options
 const client = new tmi.client(opts);
@@ -33,16 +46,6 @@ function onMessageHandler (target, context, msg, self) {
     // Remove whitespace from chat message
     // If the command is known, let's execute it
     if (commandName === '!dice') {
-<<<<<<< Updated upstream
-        const num = rollDice();
-        client.say(target, `You rolled a ${num}`);
-        console.log(`* Executed ${commandName} command`);
-    }
-    else if(commandName === '!play') {
-        const song = play();
-        client.say(target, song);
-        console.log(`* testing ${commandName} command`);
-=======
         try{
           let commandFile = require(`./Features/chatbot_Function.js`)
           commandFile.rollDice(client, target, self);
@@ -69,7 +72,6 @@ function onMessageHandler (target, context, msg, self) {
         console.log(`${err}`);
         return;
       }
->>>>>>> Stashed changes
     }
     else if(commandName === '!clear'){
         client.say(target, "/clear");
@@ -83,14 +85,7 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`Ignore this message ${commandName}`);
   }
 }
-// Function called when the "dice" command is issued
-function rollDice () {
-    const sides = 6;
-    return Math.floor(Math.random() * sides) + 1;
-  }
-function play (){
-    return `current song is`;
-}
+
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
