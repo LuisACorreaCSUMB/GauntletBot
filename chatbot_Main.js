@@ -1,4 +1,5 @@
 const tmi = require('tmi.js');
+const fetch = require('node-fetch')
 require('dotenv').config()
 /*
 const opts = {
@@ -39,7 +40,7 @@ client.connect();
 connectSpotify();
 //Spotify Connect
 async function connectSpotify() {
-  try{ let result = await fetchJSON('./spotifyConnect.js');
+  try{ let result = await fetchJS('./spotifyConnect.js');
   console.log(`Test connect ${result}`);
   } catch(error) {
     console.log('An error occurred in Spotify Connect.');
@@ -72,6 +73,7 @@ function onMessageHandler (target, context, msg, self) {
         return;
       }
     }
+    //Test Command
     else if(commandName == '!spotifyConnect'){
       try{
         let commandFile = require(`./spotifyConnect.js`)
@@ -82,6 +84,7 @@ function onMessageHandler (target, context, msg, self) {
         return;
       }
     }
+    //Commands below are chat commands
     else if(commandName === '!clear'){
         client.say(target, "/clear");
         console.log(`clearing chat`);

@@ -5,16 +5,17 @@ spotify category ID = genre
 spotify USER: user of current
 spotify URL: link
 */
-const my_client_id = 'Client_ID';
-const scopes = 'user-read-private user-read-email';
-const redirect_uri = "http://localhost:8888/callback/";
-const client_secret = 'Client_Secret'
-const opts = {
-    "access_token": "NgCXRK...MzYjw",
-    "token_type": "Bearer",
-    "scope": "user-read-private user-read-email",
-    "expires_in": 3600,
-    "refresh_token": "NgAagA...Um_SHo"
+require('dotenv').config()
+const my_client_id = process.env.SPOTIFY_ID;
+const scopes = process.env.BOT_OPTION;
+const redirect_uri = process.env.REDIRECT_URI;
+const client_secret = process.env.SPOTIFY_SECRET;
+const options = {
+    "access_token": process.env.SPOTIFY_OAUTH,
+    "token_type": process.env.TOKEN_TYPE,
+    "scope": process.env.SPOTIFY_SCOPE,
+    "expires_in": process.env.EXPIRATION,
+    "refresh_token": process.env.REFRESH_OAUTH
  };
 exports.connect = () => {
     var express = require('express'); // Express web server framework
@@ -39,7 +40,7 @@ return true;
         return err;
     }
 }
-8/
+*/
  /*
  
  

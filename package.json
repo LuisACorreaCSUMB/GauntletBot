@@ -1,6 +1,6 @@
 {
   "name": "Gauntletbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Twitch Chat Bot that runs a gauntlet minigame that ends in chat timeouts(voluntary). Idea obtained from Day[9]TV",
   "main": "chatbot_Functions.js",
   "scripts": {
@@ -18,18 +18,20 @@
   },
   "homepage": "https://github.com/Onepocketpimp/GauntletBot#readme",
   "dependencies": {
+    "3.0.0": "^3.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2",
     "spotify-sdk": "^1.0.0-beta2",
     "spotify-web-api-js": "^1.2.0",
-    "webpack": "^4.41.5",
+    "webpack": "^4.41.6",
     "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^5.16.0",
     "eslint-loader": "^3.0.3",
     "webpack-dev-middleware": "^3.7.2"
   }
