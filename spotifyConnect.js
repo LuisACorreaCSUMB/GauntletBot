@@ -24,6 +24,17 @@ exports.connect = () => {
     console.log('Listening on 8888');
     app.listen(8888);
 }
+
+
+exports.connectFetch = () => {
+    //example: GET https://api.spotify.com/v1/tracks/{id}
+    fetch('https://api.spotify.com/v1/tracks/{id}', {
+        method:'GET',
+
+    })
+    .then(res => res.json())
+    .then(json)
+}
 return true;
  /*
  async function connect(){
