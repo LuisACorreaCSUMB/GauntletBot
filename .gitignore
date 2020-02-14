@@ -1,2 +1,3 @@
 #NEVER PUBLISH TO REPOSITORY environmental variables
-.env 
+.env
+server.js

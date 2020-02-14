@@ -1,6 +1,6 @@
 # GauntletBot
 Twitch Chat Bot that will be a playlist bot. More features to be added after that is done
-Credits: caLLowCreation, WittyAdrian
+Credits: caLLowCreation, WittyAdrian, iSEVEN
 
 Features:
 1. Chat Clear - !clear
@@ -15,3 +15,10 @@ Update Notes:
 - Commit is to SpotifyAPIIntegration
 - Declaring this to v1.0.1
 
+---------- Feb 13 2020---------
+- added in passport module
+- moved spotify connect to api-request.js
+- removed spotifyConnect.js
+- removed old oauth file that was a borrowed setup but out of date
+- Commit is to SpotifyAPIIntegration
+- Declare v1.0.2

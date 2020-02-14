@@ -1,5 +1,6 @@
 const tmi = require('tmi.js');
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
 require('dotenv').config()
 /*
 const opts = {
@@ -37,15 +38,7 @@ client.on('connected', onConnectedHandler);
 
 // Connect to Twitch:
 client.connect();
-connectSpotify();
 //Spotify Connect
-async function connectSpotify() {
-  try{ let result = await fetchJS('./spotifyConnect.js');
-  console.log(`Test connect ${result}`);
-  } catch(error) {
-    console.log('An error occurred in Spotify Connect.');
-  }
-}
 
 // Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
@@ -76,7 +69,7 @@ function onMessageHandler (target, context, msg, self) {
     //Test Command
     else if(commandName == '!spotifyConnect'){
       try{
-        let commandFile = require(`./spotifyConnect.js`)
+        let commandFile = require(`./OAuth/api-request.js`)
         commandFile.connect();
         client.say(target, "Spotify Connected.")
       } catch (err){
